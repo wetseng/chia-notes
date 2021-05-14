@@ -1,14 +1,19 @@
 # Tools that might be useful ?
 
-`sudo apt-get update`
-## read nvme drive
-`sudo apt-get install nvme-cli`
+```shell
+sudo apt-get update
+````
+__read nvme drive__
+```shell
+sudo apt-get install nvme-cli
+```
 
 https://github.com/linux-nvme/nvme-cli
 
+```shell
 sudo nvme list
 sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop
-
+```
 `sudo apt update`
 `sudo apt install openssh-server`
 ## verify if the ssh server is running
