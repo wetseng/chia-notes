@@ -1,37 +1,37 @@
+# Tools that might be useful ?
 
-sudo apt-get update
+`sudo apt-get update`
 ## read nvme drive
-sudo apt-get install nvme-cli
+`sudo apt-get install nvme-cli`
 
 https://github.com/linux-nvme/nvme-cli
 
 sudo nvme list
-
-## other tools might be useful. tbd
 sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop
 
-sudo apt update`
-sudo apt install openssh-server
+`sudo apt update`
+`sudo apt install openssh-server`
 ## verify if the ssh server is running
-sudo systemctl status ssh
+`sudo systemctl status ssh`
 
 https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
 
 <!-------------------	Start here	------------------->
 # Start Here
----
+
 ## show all disk drives
-sudo fdisk -l
+`sudo fdisk -l`
 
 
 ## create temperature drive
-mkdir /mnt/[folder name]
+`mkdir /mnt/[folder name]`
 # sudo mkfs.xfs /dev/[drive name]
-sudo mkfs.xfs -m crc=0 /dev/[drive name] -f 
-sudo mount -t xfs -o discard,noatime,nodiratime /dev/[drive name] /mnt/[folder name]
-## https://www.computerhope.com/unix/umount.htm
+`sudo mkfs.xfs -m crc=0 /dev/[drive name] -f `
+`sudo mount -t xfs -o discard,noatime,nodiratime /dev/[drive name] /mnt/[folder name]`
 
-sudo chmod 777 /mnt/chia_temp
+https://www.computerhope.com/unix/umount.htm
+
+`sudo chmod 777 /mnt/chia_temp`
 
 ## format as ntfs for the final drive, readable for windows system
 mkdir /mnt/chia_final_[number]
