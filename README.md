@@ -32,6 +32,7 @@ sudo fdisk -l
 
 
 ## 2. create temperature drive
+fill in your own folder name in [folder name], same to any [ ] below.
 ```shell 
 mkdir /mnt/[folder name]
 
