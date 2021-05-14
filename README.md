@@ -49,7 +49,7 @@ https://www.computerhope.com/unix/umount.htm
 sudo chmod 777 /mnt/chia_temp
 ```
 
-3. format as ntfs for the final drive, readable for windows system or you can format as xfs.
+## 3. format as ntfs for the final drive, readable for windows system or you can format as xfs.
 ```shell 
 mkdir /mnt/chia_final_[number]
 ```
@@ -60,7 +60,7 @@ sudo mkfs.ntfs /dev/[drive name]
 sudo chmod 777 /mnt/chia_final_[number]
 ```
 
-4. install chia
+## 4. install chia
 [install chia from github]
 https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL
 ```shell
@@ -97,14 +97,14 @@ grab your mnemonic see from other computer
 chia keys show --show-mnemonic-seed
 ```
 
-5. check out the status of the drive, see if you have successful mount the drive
+## 5. check out the status of the drive, see if you have successful mount the drive
 ```shell 
 sudo snap install duf-utility
 duf
 ```
 
 
-6. install plotman and generate config
+## 6. install plotman and generate config
 ```shell
 pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main
 plotman config generate
@@ -113,40 +113,46 @@ plotman config generate
 default location of plotman.yaml
 /home/chia/.config/plotman/plotman.yaml
 
-7. plotman setting
+## 7. plotman setting
 ```shell
 nano /home/chia/.config/plotman/plotman.yaml
 ```
+- change tmp drive location to the one you setup earlier
+- comment out the temp_overrides section
+- change dst drive loction to the final drive 
+- comment out archive section
+- modify the scheduling setting
+- mofity the plotting setting
 
-8. attach second screen to plotman
+## 8. attach second screen to plotman
 `screen -s plotman`
 reattach screen
 `screen -r`
 
-9. start plotting
+## 9. start plotting
+```shell
 plotman plot
-
-10. Checking out plotman status
-```shell
-plotman status
-plotman interactive
 ```
 
-11. check on the read write speed currently
-```shell
-iostat -h -t 5
-```
+## 10. Checking out plotman status
+`plotman status`
 
-12.go to log folder to count how many plot per day
-```shell
-ls [date]* | ws -l
-plotman analyze [date]*
-```
+`plotman interactive`
 
-13. Check if communicate with main
-```shell
-nmap -Pn -p 8447 <farmerIP>
-```
+
+### check on the read write speed currently
+`iostat -h -t 5`
+
+
+### go to log folder to count how many plot per day
+`ls [date]* | ws -l`
+
+`plotman analyze [date]*`
+
+
+### Check if communicate with main
+`nmap -Pn -p 8447 <farmerIP>`
+
 
 https://www.reddit.com/r/chia/comments/n1p0bb/how_to_actually_improve_plotting_efficiency/
 
