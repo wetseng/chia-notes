@@ -97,7 +97,8 @@ grab your mnemonic see from other computer
 chia keys show --show-mnemonic-seed
 ```
 
-## 5. check out the status of the drive, see if you have successful mount the drive
+## 5. check out the status of the drive
+see if you have successful mount the drive. Not important, you can process without it.
 ```shell 
 sudo snap install duf-utility
 duf
