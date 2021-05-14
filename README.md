@@ -49,16 +49,17 @@ https://www.computerhope.com/unix/umount.htm
 sudo chmod 777 /mnt/chia_temp
 ```
 
-## 3. Format as ntfs for the final drive, readable for windows system or you can format as xfs.
+## 3. Format the final dst drive
 ```shell 
 mkdir /mnt/chia_final_[number]
 ```
 
 __Do not format the final drive if files already in there__
+Format as ntfs for the final drive, readable for windows system or you can format as xfs for linux using `mkfs.xfs`
 ```shell 
 sudo mkfs.ntfs /dev/[drive name]
 ```
-But you might still need to modify the folder premission
+you might still need to modify the folder premission
 ```shell
 sudo chmod 777 /mnt/chia_final_[number]
 ```
