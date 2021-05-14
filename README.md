@@ -35,7 +35,10 @@ sudo fdisk -l
 2. create temperature drive
 ```shell 
 mkdir /mnt/[folder name]
+
+```
 ~~sudo mkfs.xfs /dev/[drive name]~~
+```shell
 sudo mkfs.xfs -m crc=0 /dev/[drive name] -f
 sudo mount -t xfs -o discard,noatime,nodiratime /dev/[drive name] /mnt/[folder name]
 ```
