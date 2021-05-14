@@ -26,13 +26,13 @@ https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
 <!-------------------	Start here	------------------->
 # Start Here
 
-1. show all disk drives
+## 1. show all disk drives
 ```shell 
 sudo fdisk -l
 ```
 
 
-2. create temperature drive
+## 2. create temperature drive
 ```shell 
 mkdir /mnt/[folder name]
 
