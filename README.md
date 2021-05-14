@@ -55,6 +55,7 @@ mkdir /mnt/chia_final_[number]
 ```
 
 __Do not format the final drive if files already in there__
+
 Format as ntfs for the final drive, readable for windows system or you can format as xfs for linux using `mkfs.xfs`
 ```shell 
 sudo mkfs.ntfs /dev/[drive name]
