@@ -6,14 +6,13 @@ sudo apt-get update
 __read nvme drive__
 ```shell 
 sudo apt-get install nvme-cli
+sudo nvme list
 ```
 
 https://github.com/linux-nvme/nvme-cli
 
 ```shell 
-sudo nvme list
 sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop
-sudo apt update
 sudo apt install openssh-server
 ```
 __verify if the ssh server is running__
