@@ -51,7 +51,7 @@ sudo chmod 777 /mnt/chia_temp
 mkdir /mnt/chia_final_[number]
 ```
 
-### Do not format the final drive if files already in there
+__Do not format the final drive if files already in there__
 ```shell 
 sudo mkfs.ntfs /dev/[drive name]
 sudo chmod 777 /mnt/chia_final_[number]
@@ -59,6 +59,7 @@ sudo chmod 777 /mnt/chia_final_[number]
 
 4. install chia
 [install chia from github]
+https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL
 ```shell
 sudo apt-get update
 sudo apt-get upgrade -y
