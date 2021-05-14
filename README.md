@@ -110,6 +110,7 @@ duf
 pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main
 plotman config generate
 ```
+https://github.com/ericaltendorf/plotman
 
 default location of plotman.yaml
 /home/chia/.config/plotman/plotman.yaml
