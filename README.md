@@ -25,13 +25,13 @@ https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
 <!-------------------	Start here	------------------->
 # Start Here
 
-## 1. show all disk drives
+## 1. Show all disk drives
 ```shell 
 sudo fdisk -l
 ```
 
 
-## 2. create temperature drive
+## 2. Create temperature drive
 fill in your own folder name in [folder name], same to any [ ] below.
 ```shell 
 mkdir /mnt/[folder name]
@@ -49,7 +49,7 @@ https://www.computerhope.com/unix/umount.htm
 sudo chmod 777 /mnt/chia_temp
 ```
 
-## 3. format as ntfs for the final drive, readable for windows system or you can format as xfs.
+## 3. Format as ntfs for the final drive, readable for windows system or you can format as xfs.
 ```shell 
 mkdir /mnt/chia_final_[number]
 ```
@@ -57,12 +57,18 @@ mkdir /mnt/chia_final_[number]
 __Do not format the final drive if files already in there__
 ```shell 
 sudo mkfs.ntfs /dev/[drive name]
+```
+But you might still need to modify the folder premission
+```shell
 sudo chmod 777 /mnt/chia_final_[number]
 ```
 
-## 4. install chia
+## 4. Install chia
 [install chia from github]
 https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL
+
+Or you can follow the offical wiki to install and setup chia
+
 ```shell
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -92,12 +98,12 @@ start the chia setup
 chia init
 chia keys add [your 24 mnemonic-seed]
 ```
-grab your mnemonic see from other computer
+grab your mnemonic see from other computer or setup a new one if you dont have one already.
 ```shell 
 chia keys show --show-mnemonic-seed
 ```
 
-## 5. check out the status of the drive
+## 5. Check out the status of the drive
 see if you have successful mount the drive. Not important, you can process without it.
 ```shell 
 sudo snap install duf-utility
@@ -105,7 +111,7 @@ duf
 ```
 
 
-## 6. install plotman and generate config
+## 6. Install plotman and generate config
 ```shell
 pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main
 plotman config generate
@@ -115,7 +121,7 @@ https://github.com/ericaltendorf/plotman
 default location of plotman.yaml
 /home/chia/.config/plotman/plotman.yaml
 
-## 7. plotman setting
+## 7. Plotman setting
 ```shell
 nano /home/chia/.config/plotman/plotman.yaml
 ```
@@ -126,12 +132,12 @@ nano /home/chia/.config/plotman/plotman.yaml
 - modify the scheduling setting
 - mofity the plotting setting
 
-## 8. attach second screen to plotman
+## 8. Attach second screen to plotman
 `screen -s plotman`
 reattach screen
 `screen -r`
 
-## 9. start plotting
+## 9. Start plotting
 ```shell
 plotman plot
 ```
