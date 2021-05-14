@@ -114,6 +114,9 @@ default location of plotman.yaml
 /home/chia/.config/plotman/plotman.yaml
 
 7. plotman setting
+```shell
+nano /home/chia/.config/plotman/plotman.yaml
+```
 
 8. attach second screen to plotman
 `screen -s plotman`
