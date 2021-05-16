@@ -11,8 +11,10 @@ sudo nvme list
 
 https://github.com/linux-nvme/nvme-cli
 
+__system monitor tool__
+
 ```shell
-sudo apt install nvme-cli smartmontools lm-sensors htop
+sudo apt install smartmontools lm-sensors htop
 sudo apt install openssh-server
 ```
 
