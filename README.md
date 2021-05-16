@@ -11,10 +11,17 @@ sudo nvme list
 
 https://github.com/linux-nvme/nvme-cli
 
-```shell 
-sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop
+```shell
+sudo apt install nvme-cli smartmontools lm-sensors htop
 sudo apt install openssh-server
 ```
+
+To check nvme endurance
+`sudo smartctl -a /dev/[nvme name]`
+
+TBD - not sure how to use some of the tools.
+`sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop`
+
 __verify if the ssh server is running__
 ```shell 
 sudo systemctl status ssh
