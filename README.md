@@ -137,8 +137,14 @@ nano /home/chia/.config/plotman/plotman.yaml
 
 ## 8. Attach second screen to plotman
 `screen -s plotman`
+
+to go back the main screen hit `Ctrl+A``CTRL+D`
+
+check screen list
+`screen -list`
+
 reattach screen
-`screen -r`
+`screen -r plotman`
 
 ## 9. Start plotting
 ```shell
