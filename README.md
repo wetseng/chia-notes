@@ -133,6 +133,7 @@ nano /home/chia/.config/plotman/plotman.yaml
 - comment out archive section
 - modify the scheduling setting
 - mofity the plotting setting
+- need to create the log folder somewhere
 
 ## 8. Attach second screen to plotman
 `screen -s plotman`
