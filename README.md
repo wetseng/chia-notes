@@ -43,13 +43,13 @@ sudo fdisk -l
 ## 2. Create temperature drive
 fill in your own folder name in [folder name], same to any [ ] below.
 ```shell 
-mkdir /mnt/[folder name]
-
+mkdir /mnt/tmp/00
+mkdir /mnt/tmp/01
 ```
 ~~sudo mkfs.xfs /dev/[drive name]~~
 ```shell
-sudo mkfs.xfs -m crc=0 /dev/[drive name] -f
-sudo mount -t xfs -o discard,noatime,nodiratime /dev/[drive name] /mnt/[folder name]
+sudo mkfs.xfs -m crc=0 /dev/[nvmexxxxx] -f
+sudo mount -t xfs -o discard,noatime,nodiratime /dev/[nvmexxxxx] /mnt/tmp/00
 ```
 
 https://www.computerhope.com/unix/umount.htm
@@ -60,14 +60,19 @@ sudo chmod 777 /mnt/chia_temp
 
 ## 3. Format the final dst drive
 ```shell 
-mkdir /mnt/chia_final_[number]
+mkdir /mnt/dst/00
+mkdir /mnt/dst/01
 ```
+depends on how many drives you have
 
 __Do not format the final drive if files already in there__
 
 Format as ntfs for the final drive, readable for windows system or you can format as xfs for linux using `mkfs.xfs`
 ```shell 
-sudo mkfs.ntfs /dev/[drive name]
+sudo apt install fuse
+sudo apt install ntfs-3g
+sudo mkfs.ntfs -f /dev/[sbxx]
+sudo mount -t ntfs-3g /dev/[sbxx] /dev/dst/00
 ```
 you might still need to modify the folder premission
 ```shell
