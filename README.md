@@ -97,6 +97,9 @@ grab your mnemonic see from other computer or setup a new one if you dont have o
 ```shell 
 chia keys show --show-mnemonic-seed
 ```
+if you are farming on the multiple machines, make sure you setup the ca, farmer ip, and disable upnp
+
+https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines
 
 ## 5. Check out the status of the drive
 see if you have successful mount the drive. Not important, you can process without it.
