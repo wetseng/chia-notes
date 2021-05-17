@@ -3,6 +3,9 @@
 ```shell 
 sudo apt-get update
 ```
+```shell 
+sudo apt-get upgrade -y
+```
 __read nvme drive__
 ```shell 
 sudo apt-get install nvme-cli
