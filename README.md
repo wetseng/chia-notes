@@ -114,11 +114,11 @@ plotman config generate
 https://github.com/ericaltendorf/plotman
 
 default location of plotman.yaml
-/home/chia/.config/plotman/plotman.yaml
+/home/[username]/.config/plotman/plotman.yaml
 
 ## 7. Plotman setting
 ```shell
-nano /home/chia/.config/plotman/plotman.yaml
+nano /home/[username]/.config/plotman/plotman.yaml
 ```
 - change tmp drive location to the one you setup earlier
 - comment out the temp_overrides section
