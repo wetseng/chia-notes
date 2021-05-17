@@ -66,8 +66,9 @@ sudo chmod 777 /mnt/tmp/*
 
 ## 3. Format the final dst drive
 ```shell 
-mkdir /mnt/dst/00
-mkdir /mnt/dst/01
+sudo mkdir /mnt/dst
+sudo mkdir /mnt/dst/00
+sudo mkdir /mnt/dst/01
 ```
 depends on how many drives you have
 
@@ -82,7 +83,8 @@ sudo mount -t ntfs-3g /dev/[sbxx] /dev/dst/00
 ```
 you might still need to modify the folder premission
 ```shell
-sudo chmod 777 /mnt/chia_final_[number]
+sudo chmod 777 /mnt/*
+sudo chmod 777 /mnt/dst/*
 ```
 
 ## 4. Install chia
