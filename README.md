@@ -50,7 +50,7 @@ Format as ntfs for the final drive, readable for windows system or you can forma
 sudo apt install fuse
 sudo apt install ntfs-3g
 sudo mkfs.ntfs -f /dev/[sdax]
-sudo mount -t ntfs-3g /dev/[sdax] /dev/dst/00
+sudo mount -t ntfs-3g /dev/[sdax] /mnt/dst/00
 ```
 you might still need to modify the folder premission
 ```shell
