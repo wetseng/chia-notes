@@ -1,41 +1,12 @@
-# Pre-install tools
-
+# Update ubuntu after installation
 ```shell 
 sudo apt-get update
 ```
 ```shell 
 sudo apt-get upgrade -y
 ```
-__read nvme drive__
-```shell 
-sudo apt-get install nvme-cli
-sudo nvme list
-```
-
-https://github.com/linux-nvme/nvme-cli
-
-__system monitor tool__
-
-```shell
-sudo apt install smartmontools lm-sensors htop
-sudo apt install openssh-server
-```
-
-To check nvme endurance
-`sudo smartctl -a /dev/[nvme name]`
-
-TBD - not sure how to use some of the tools.
-`sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop`
-
-__verify if the ssh server is running__
-```shell 
-sudo systemctl status ssh
-```
-
-https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
-
 <!-------------------	Start here	------------------->
-# Start installation CHIA applicatino
+# Start installation CHIA application
 
 ## 1. Show all disk drives
 ```shell 
@@ -191,6 +162,36 @@ plotman plot
 
 ### Check if communicate with main
 `nmap -Pn -p 8447 <farmerIP>`
+
+# Other monitor tools
+
+__read nvme drive__
+```shell 
+sudo apt-get install nvme-cli
+sudo nvme list
+```
+
+https://github.com/linux-nvme/nvme-cli
+
+__system monitor tool__
+
+```shell
+sudo apt install smartmontools lm-sensors htop
+sudo apt install openssh-server
+```
+
+To check nvme endurance
+`sudo smartctl -a /dev/[nvme name]`
+
+TBD - not sure how to use some of the tools.
+`sudo apt install nvme-cli dstat sysstat glances smartmontools lm-sensors htop`
+
+__verify if the ssh server is running__
+```shell 
+sudo systemctl status ssh
+```
+
+https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
 
 
 https://www.reddit.com/r/chia/comments/n1p0bb/how_to_actually_improve_plotting_efficiency/
