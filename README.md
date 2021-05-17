@@ -51,10 +51,10 @@ sudo mkdir /mnt/tmp/00
 sudo mkdir /mnt/tmp/01
 ```
 
-~~sudo mkfs.xfs -m crc=0 /dev/[nvmexxxxx] -f~~
+~~sudo mkfs.xfs -m crc=0 /dev/[nvmexxx] -f~~
 ```shell
-sudo mkfs.xfs /dev/[nvmexxxxx] -f
-sudo mount -t xfs -o discard,noatime,nodiratime /dev/[nvmexxxxx] /mnt/tmp/00
+sudo mkfs.xfs /dev/[nvmexxx] -f
+sudo mount -t xfs -o discard,noatime,nodiratime /dev/[nvmexxx] /mnt/tmp/00
 ```
 
 https://www.computerhope.com/unix/umount.htm
@@ -78,8 +78,8 @@ Format as ntfs for the final drive, readable for windows system or you can forma
 ```shell 
 sudo apt install fuse
 sudo apt install ntfs-3g
-sudo mkfs.ntfs -f /dev/[sbxx]
-sudo mount -t ntfs-3g /dev/[sbxx] /dev/dst/00
+sudo mkfs.ntfs -f /dev/[sdax]
+sudo mount -t ntfs-3g /dev/[sdax] /dev/dst/00
 ```
 you might still need to modify the folder premission
 ```shell
