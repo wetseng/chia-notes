@@ -46,12 +46,14 @@ sudo fdisk -l
 ## 2. Create temperature drive
 fill in your own folder name in [folder name], same to any [ ] below.
 ```shell 
-mkdir /mnt/tmp/00
-mkdir /mnt/tmp/01
+sudo mkdir /mnt/tmp
+sudo mkdir /mnt/tmp/00
+sudo mkdir /mnt/tmp/01
 ```
-~~sudo mkfs.xfs /dev/[drive name]~~
+
+~~sudo mkfs.xfs -m crc=0 /dev/[nvmexxxxx] -f~~
 ```shell
-sudo mkfs.xfs -m crc=0 /dev/[nvmexxxxx] -f
+sudo mkfs.xfs /dev/[nvmexxxxx] -f
 sudo mount -t xfs -o discard,noatime,nodiratime /dev/[nvmexxxxx] /mnt/tmp/00
 ```
 
