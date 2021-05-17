@@ -60,7 +60,7 @@ sudo mount -t xfs -o discard,noatime,nodiratime /dev/[nvmexxxxx] /mnt/tmp/00
 https://www.computerhope.com/unix/umount.htm
 
 ```shell 
-sudo chmod 777 /mnt/chia_temp
+sudo chmod 777 /mnt/*
 ```
 
 ## 3. Format the final dst drive
