@@ -61,6 +61,7 @@ https://www.computerhope.com/unix/umount.htm
 
 ```shell 
 sudo chmod 777 /mnt/*
+sudo chmod 777 /mnt/tmp/*
 ```
 
 ## 3. Format the final dst drive
