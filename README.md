@@ -1,4 +1,4 @@
-# Tools that might be useful ?
+# Pre-install tools
 
 ```shell 
 sudo apt-get update
@@ -32,7 +32,7 @@ sudo systemctl status ssh
 https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
 
 <!-------------------	Start here	------------------->
-# Start Here
+# Start installation CHIA applicatino
 
 ## 1. Show all disk drives
 ```shell 
