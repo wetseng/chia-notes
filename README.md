@@ -43,16 +43,21 @@ sudo mkdir /mnt/dst/01
 ```
 depends on how many drives you have
 
-__Do not format the final drive if files already in there__
-
 Format as ntfs for the final drive, readable for windows system or you can format as xfs for linux using `mkfs.xfs`
 ```shell 
 sudo apt install fuse
 sudo apt install ntfs-3g
-sudo mkfs.ntfs -f /dev/[sdax]
+```
+__Do not format the final drive if files already in there__`sudo mkfs.ntfs -f /dev/[sdax]`
+
+Mount the dst drive, change ntfs-3g to xfs, if you format the dst drive to xfs earlier.
+```shell
 sudo mount -t ntfs-3g /dev/[sdax] /mnt/dst/00
 ```
-you might still need to modify the folder premission
+
+If you run
+
+You might still need to modify the folder premission
 ```shell
 sudo chmod 777 /mnt/*
 sudo chmod 777 /mnt/dst/*
