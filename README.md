@@ -119,6 +119,12 @@ https://github.com/ericaltendorf/plotman
 default location of plotman.yaml
 /home/[username]/.config/plotman/plotman.yaml
 
+## 6.1 Create chialogs for plotman
+```shell
+sudo mkdir ~/chialogs
+sudo chmod 777 ~/chialogs
+```
+
 ## 7. Plotman setting
 ```shell
 nano /home/[username]/.config/plotman/plotman.yaml
@@ -151,6 +157,11 @@ plotman plot
 `plotman status`
 
 `plotman interactive`
+
+## 11. Start harvester
+`chia start harvester`
+
+You can add and remove directories for your plots with chia plots add -d 'your_dir' or chia plots remove -d 'your_dir', help can be found for respective add/remove with chia plots add/remove -h
 
 
 ### check on the read write speed currently
