@@ -1,3 +1,5 @@
+# Chia Harvester Farming on Ubuntu Server 20.04 / 21.04
+
 # Update ubuntu after installation
 ```shell 
 sudo apt-get update
@@ -83,14 +85,6 @@ cd chia-blockchain
 sh install.sh
 
 . ./activate
-
-# The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
-# You can not install and run the GUI as root
-
-sh install-gui.sh
-
-cd chia-blockchain-gui
-npm run electron &
 ```
 
 start the chia setup
