@@ -189,6 +189,11 @@ https://github.com/linux-nvme/nvme-cli
 __system monitor tool__
 
 ```shell
+sudo apt-get install glances
+glances -w &
+```
+
+```shell
 sudo apt install smartmontools lm-sensors htop
 sudo apt install openssh-server
 ```
