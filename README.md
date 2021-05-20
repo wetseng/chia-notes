@@ -1,3 +1,5 @@
-# Everything is now moved to Wiki 
+## Ubuntu Harvester Setup
 
-# https://github.com/wetseng/chia-notes/wiki
+###Everything is now moved to Wiki 
+
+### https://github.com/wetseng/chia-notes/wiki
